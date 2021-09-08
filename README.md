@@ -26,12 +26,11 @@ Select Login Provider of your choice, Github or Azure
 After you've successfully logged in, 
 Click "Add Application"
 
-Select your Organization and go to step 4. If you want to create a new Organization click "CREATE AN ORGANIZATION" and follow the steps below:
+![App Screnshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/04%20-%20Create%20your%20first%20application.png?raw=true)
 
 Enter the name of your Application
-Enter a public description of your Organization (optional)
+Enter a public description of your Application (optional)
 
 Click "Create Application"
 
-
-
+![App Screnshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/05%20-%20Application%20Details%20Create.png?raw=true)
