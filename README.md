@@ -68,6 +68,7 @@ Select your application and the person you want to generate a token for. If you'
 Next, click "Create Token" tok get your OpenId token to use in your client for our OpenBanking services
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/12%20-%20Token%20Generation.png?raw=true)
 
-
+Your token will be created and you can copy the value to use in your application:
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/13%20-%20Your%20Token.png?raw=true)
 
 
