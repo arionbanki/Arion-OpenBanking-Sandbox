@@ -36,7 +36,26 @@ Click "Create Application"
 
 ![App Screneshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/05%20-%20Application%20Details%20Create.png?raw=true)
 
-After that you'll be enrolled in our PSD Sandbox, and you'll see the app details, e.g. ApiKey, ClienId and your ClientSecret
+After that you'll be enrolled in our PSD Sandbox, and you'll see the app details, e.g. ApiKey, ClienId and your ClientSecret.
 
-![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/06%20-%20My%20Demo%20App%20and%20create%20token.png?raw=true)
+You will use this data ( ApiKey, CliendIt and ClienSecret ) in your code to connect to Arion's OpenBanking services.
+
+![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/06%20-%20My%20Demo%20App.png?raw=true)
+
+
+Next head into the Users menu and create your Users
+
+![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/07%20-%20Manage%20Users.png?raw=true)
+
+After you've hit "Add User" - then select your newly created user in the grid to generate data for him/her
+
+To create data for that user, hit "Create Account":
+
+![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/08%20-%20Create%20Accounts.png?raw=true)
+
+
+
+
+Next, click "Generate Token" tok get your OpenId token to use in your client for our OpenBanking services
+
 
