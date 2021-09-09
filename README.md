@@ -26,11 +26,15 @@ Select Login Provider of your choice, Github or Azure
 After you've successfully logged in, 
 Click "Add Application"
 
-![App Screnshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/04%20-%20Create%20your%20first%20application.png?raw=true)
+![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/04%20-%20Create%20your%20first%20application.png?raw=true)
 
 Enter the name of your Application
 Enter a public description of your Application (optional)
 
 Click "Create Application"
 
-![App Screnshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/05%20-%20Application%20Details%20Create.png?raw=true)
+![App Screneshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/05%20-%20Application%20Details%20Create.png?raw=true)
+
+After that you'll be enrolled in our PSD Sandbox, and you'll see the app details, e.g. ApiKey, ClienId and your ClientSecret
+
+![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/06%20-%20My%20Demo%20App.png?raw=true)
