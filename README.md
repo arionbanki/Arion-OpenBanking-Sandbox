@@ -29,6 +29,7 @@ Click "Add Application"
 ![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/04%20-%20Create%20your%20first%20application.png?raw=true)
 
 Enter the name of your Application
+
 Enter a public description of your Application (optional)
 
 Click "Create Application"
