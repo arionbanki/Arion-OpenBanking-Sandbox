@@ -78,4 +78,19 @@ Next you can download our sample client code from https://github.com/arionbanki/
 and put the data you've created in the previous steps into the Program.cs client to connect:
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/14%20-%20DevConsole%20Demo%20Code.png?raw=true)
 
-!!!!!!TODO bæta við hvernig maður uploadar skrám í UI'inu ...!!!!!!
+You're all set! ;-)
+
+## Appendix
+
+If you want to upload more example data for the user created inside the webportal, you can do that.
+Under users, hit the upload button and you can download a template with example data, so more data can be added to your test user.
+
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/15%20-%20Download%20A%20Template.png?raw=true)
+
+When you hit the "Download a example" you'll get a CSV file which you can modify as you want to create new records:
+
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/16%20-%20Excel%20Example.png?raw=true)
+
+
+After you've created your data, you can hit the "Choose file" to upload it for the selected user:
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/17%20-%20Upload.png?raw=true)
