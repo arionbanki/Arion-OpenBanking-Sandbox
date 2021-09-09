@@ -11,7 +11,7 @@
   
   Login/Register to the Arion WebPortal
 
-Go to https://isit-openbanking-sandbox-ui-master.dev.service.arionbanki.is/ and click "Get Started"
+Go to https://developers.arionbanki.is/ and click "Get Started"
 
 
 ![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/02%20-%20Getting%20Started.png?raw=true)
