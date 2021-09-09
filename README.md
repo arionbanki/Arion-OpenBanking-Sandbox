@@ -70,6 +70,10 @@ Next, click "Create Token" tok get your OpenId token to use in your client for o
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/12%20-%20Token%20Generation.png?raw=true)
 
 Your token will be created and you can copy the value to use in your application, and set it as bearer in the http header of your application:
+
+( please note this token will only be displayed once in this page - you can however create a new token anytime you like)
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/13%20-%20Token%20Created.png?raw=true)
 
-
+Next you can download our sample client code from https://github.com/arionbanki/Arion-OpenBanking-Sandbox/tree/main/IsIT.OpenBanking.Sandbox.DeveloperConsole
+and put the data you've created in the previous steps into the Program.cs client to connect:
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/14%20-%20DevConsole%20Demo%20Code.png?raw=true)
