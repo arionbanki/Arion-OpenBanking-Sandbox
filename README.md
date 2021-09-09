@@ -77,3 +77,5 @@ Your token will be created and you can copy the value to use in your application
 Next you can download our sample client code from https://github.com/arionbanki/Arion-OpenBanking-Sandbox/tree/main/IsIT.OpenBanking.Sandbox.DeveloperConsole
 and put the data you've created in the previous steps into the Program.cs client to connect:
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/14%20-%20DevConsole%20Demo%20Code.png?raw=true)
+
+!!!!!!TODO bæta við hvernig maður uploadar skrám í UI'inu ...!!!!!!
