@@ -53,8 +53,17 @@ To create data for that user, hit "Create Account":
 
 ![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/08%20-%20Create%20Accounts.png?raw=true)
 
+Your newly created test data will be displayed:
 
+![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/09%20-%20Accounts%20Data.png?raw=true)
 
+Next head into your Application details page and generate a token. This token will be used to connect to our OpenBanking Api services:
+
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/10%20-%20Generate%20Token%20Button.png?raw=true)
+
+Select your application and the person you want to generate a token for. If you've created multiple users, you will get multiple users from this dropdown. If not, you'll only see one user:
+
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/11%20-%20Create%20Token.png?raw=true)
 
 Next, click "Generate Token" tok get your OpenId token to use in your client for our OpenBanking services
 
