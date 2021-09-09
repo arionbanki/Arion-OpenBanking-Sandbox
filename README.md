@@ -38,7 +38,8 @@ Click "Create Application"
 
 After that you'll be enrolled in our PSD Sandbox, and you'll see the app details, e.g. ApiKey, ClienId and your ClientSecret.
 
-You will use this data ( ApiKey, CliendIt and ClienSecret ) in your code to connect to Arion's OpenBanking services.
+You will use this data in your code to connect to Arion's OpenBanking services.
+( CliendId and ClienSecret is not currently needed for demo purposes now )
 
 ![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/06%20-%20My%20Demo%20App.png?raw=true)
 
