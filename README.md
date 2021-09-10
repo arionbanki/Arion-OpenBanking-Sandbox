@@ -137,9 +137,7 @@ There's an example in our demo test-client on how to do that in .Net core:
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/19%20-%20Create%20Consent%20In%20Net.png?raw=true)
 
 
-The http call looks like this:
-
-## Example for creating a consent
+The http call looks like this - example for creating a consent:
 
 ```javascript
 curl -X POST "/v1/consents" -H "accept: text/plain" -H "xRequestID: <random-UUID>" -H "pSUIPAddress: <IP-Address>" -H "PSU_ID: <PSU-ID>" -H "Ocp-Apim-Subscription-Key: <API-Key>" -H "Authorization: Bearer <AccessToken>" -H "Content-Type: application/json-patch+json" -d "{\"access\":{\"accounts\":[{\"iban\":\"IS970352264747671912631469\",\"bban\":\"035226474767\",\"pan\":null,\"maskedPan\":\"492500******1234\",\"msisdn\":null,\"currency\":\"ISK\"},{\"iban\":\"IS340395263302831912631469\",\"bban\":\"039526330283\",\"pan\":null,\"maskedPan\":null,\"msisdn\":null,\"currency\":\"ISK\"}],\"balances\":null,\"transactions\":null,\"availableAccounts\":null,\"availableAccountsWithBalance\":null,\"allPsd2\":null},\"recurringIndicator\":true,\"validUntil\":\"2021-09-02T14:35:47.0470702+00:00\",\"frequencyPerDay\":4,\"combinedServiceIndicator\":false}"
