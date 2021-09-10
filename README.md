@@ -184,6 +184,7 @@ scaRedirect": {
 ```
 
 and if we open up that path we get this page, where we can confirm the consent:
+
 !TODO hér vantar screenshot úr nýja UI portalnum fyrir Consents
 
 #### How to Access Account Balances and Transactions
@@ -197,6 +198,7 @@ and if we open up that path we get this page, where we can confirm the consent:
 
 
 #### How to Initiate and Authorize a Payment
+
 !TODO hér vantar screenshot úr nýja UI portalnum fyrir SCA payments
 ...
 
