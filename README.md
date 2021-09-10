@@ -122,11 +122,13 @@ the values for the token look like this:
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/20%20-%20Example%20Token%20Scopes.png?raw=true)
 
 #### Creating a consent
+Consents are the confirmation 
+
 To be able to use our OpenBanking Services, you need to create a consent
 
 Later when calling the Accounts or Payments endpoints you use the id which you get back when creating a consent
 
-These are the paramters required to create a valid consent:
+These are the parameters required to create a valid consent, which you then need to confirm before calling our OpenBanking Apis:
 1. xRequestID header - Valid UUID
 2. PSU_ID header - Valid kennitala of the natural or legal person making use of a payment service - the user which you get from our Openbanking WebPortal 
 3. Ocp-Apim-Subscription-Key header - API key which you get from our Openbanking WebPortal 
@@ -169,3 +171,33 @@ and here's an example of the return type ( the actual consent ):
   "psuMessage": null
 }
 ```
+
+To confirm a consent, which is needed before calling our OpenBanking Apis you open up the scaRedirect link which you get back from the newly created consent,
+where you can confirm the consent:
+
+For example, in the example above it was:
+```javascript
+scaRedirect": {
+      "href": "https://localhost:44303/psd2/scas/authorize?clientid=TheClient&response_type=code&scope=openid+CO%3A151&redirect_uri=" }
+```
+
+and if we open up that path we get this page, where we can confirm the consent:
+
+#### How to Access Account Balances and Transactions
+
+...
+
+
+
+
+
+
+
+#### How to Initiate and Authorize a Payment
+
+...
+
+
+#### How to Request Information about Available Funds
+
+...
