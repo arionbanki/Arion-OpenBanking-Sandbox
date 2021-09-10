@@ -122,9 +122,11 @@ the values for the token look like this:
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/20%20-%20Example%20Token%20Scopes.png?raw=true)
 
 #### Creating a consent
-Consents are the confirmation 
+In the PSD2 directive consents are needed to 
+* access account balances and transactions,
+* and initiate and authorize payment
 
-To be able to use our OpenBanking Services, you need to create a consent
+So to be able to use our OpenBanking Services, you need to create a consent
 
 Later when calling the Accounts or Payments endpoints you use the id which you get back when creating a consent
 
