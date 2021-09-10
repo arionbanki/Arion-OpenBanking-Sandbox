@@ -107,19 +107,35 @@ Here is a detailed documentation for our it:
 https://isit-openbanking-sandbox-ui-master.prod.service.arionbanki.is/redocly
 
 Please note that you need the "openbanking.read" and "openbanking.readwrite" scopes to be able to access our OpenBanking Api
-- it is already supplied in the token you get from our OpenBanking WebPortal
+- it is already supplied in the token you get from our OpenBanking WebPortal, as you can see by inspecting the token ( e.g. by pasting it into www.jwt.io ):
+
+an example token:
+```javascript
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiLDnsOzcmV5IFLDs3Mgw57DjSDDk2xhZnNkw7N0dGlyIiwiaHR0cDovL3NjaGVtYXMuYXJpb25iYW5raS5pcy93cy8yMDIwLzA1L3NhbmRib3gvY2xhaW1zL2FwaWtleSI6ImJiYzZlOGYyZjcyOTRkMDJhMjkzN2MzYjNhODY5YjBiIiwiaHR0cDovL3NjaGVtYXMuYXJpb25iYW5raS5pcy93cy8yMDIwLzA1L2NsYWltcy9rZW5uaXRhbGEiOiIxOTEyNjMxNDY5IiwiaHR0cDovL3NjaGVtYXMuYXJpb25iYW5raS5pcy93cy8yMDIwLzA1L2NsYWltcy9hcHBpZCI6IlRoZUNsaWVudCIsInNjcCI6InByb2ZpbGUsIG9wZW5iYW5raW5nLnJlYWQsIG9wZW5iYW5raW5nLnJlYWR3cml0ZSIsIm5iZiI6MTYzMTE3OTgwNiwiZXhwIjoxNjMxMjM5ODA2LCJpc3MiOiJBcmlvblNhbmRib3ggRGV2IElzc3VlciIsImF1ZCI6InVybjppb2J3cyJ9.EaX-MSr885v5ZW8834Ozx9orPJbEUHh3zt6__9ln0HM
+```
+
+the values for it:
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/20%20-%20Example%20Token%20Scopes.png?raw=true)
 
 To be able to use our OpenBanking Services, you need to create a consent
+
+Later when calling the Accounts or Payments endpoints you use the id which you get back when creating a consent
+
+These are the paramters required to create a valid consent:
+1. xRequestID header - Valid UUID
+2. PSU_ID header - Valid kennitala of the natural or legal person making use of a payment service - the user which you get from our Openbanking WebPortal 
+3. Ocp-Apim-Subscription-Key header - API key which you get from our Openbanking WebPortal 
+4. pSUIPAddress header -  Valid IP Address
+5. Authorization header - Valid Access token which you get from our Openbanking WebPortal 
 
 There's an example in our demo test-client on how to do that in .Net core:
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/19%20-%20Create%20Consent%20In%20Net.png?raw=true)
 
-But the http call basically looks like this:
+
+The http call looks like this:
 
 ## Example for creating a consent
 
 ```javascript
 curl -X POST "/v1/consents" -H "accept: text/plain" -H "xRequestID: <random-UUID>" -H "pSUIPAddress: <IP-Address>" -H "PSU_ID: <PSU-ID>" -H "Ocp-Apim-Subscription-Key: <API-Key>" -H "Authorization: Bearer <AccessToken>" -H "Content-Type: application/json-patch+json" -d "{\"access\":{\"accounts\":[{\"iban\":\"IS970352264747671912631469\",\"bban\":\"035226474767\",\"pan\":null,\"maskedPan\":\"492500******1234\",\"msisdn\":null,\"currency\":\"ISK\"},{\"iban\":\"IS340395263302831912631469\",\"bban\":\"039526330283\",\"pan\":null,\"maskedPan\":null,\"msisdn\":null,\"currency\":\"ISK\"}],\"balances\":null,\"transactions\":null,\"availableAccounts\":null,\"availableAccountsWithBalance\":null,\"allPsd2\":null},\"recurringIndicator\":true,\"validUntil\":\"2021-09-02T14:35:47.0470702+00:00\",\"frequencyPerDay\":4,\"combinedServiceIndicator\":false}"
 ```
-
-Later when calling the Accounts or Payments endpoints you use the id which you get back when creating a consent
