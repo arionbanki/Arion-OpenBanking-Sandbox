@@ -96,6 +96,8 @@ When you hit the "Download a example" you'll get a CSV file which you can modify
 After you've created your data, you can hit the "Choose file" to upload it for the selected user:
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/17%20-%20Upload.png?raw=true)
 
+
+
 ### Calling the OpenBanking Api
 The Swagger for our OpenBanking Api can be found here:
 https://isit-openbanking-sandbox-iobws-master.prod.service.arionbanki.is/swagger/index.html
