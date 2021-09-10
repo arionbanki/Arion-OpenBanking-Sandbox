@@ -190,7 +190,7 @@ and if we open up that path we get this page, where we can authorize the consent
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/24%20-%20Consent%20agreed.png?raw=true)
 
-All done! You're ready to call the actual OpenBanking Apis now ;-)
+All done! You now have an authorized consent and you're ready to call the actual OpenBanking Apis now ;-)
 
 #### How to Access Account Balances and Transactions
 
