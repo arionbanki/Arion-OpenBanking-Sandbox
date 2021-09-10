@@ -198,9 +198,9 @@ https://isit-openbanking-sandbox-iobws-master.prod.service.arionbanki.is/swagger
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/21%20-%20AccountsApi.png?raw=true)
 
-These are the parameters required to geta Account List by calling our OpenBanking Apis:
+These are the parameters required to get Account List by calling our OpenBanking Apis:
 1. xRequestID header - Valid UUID
-2. consentID header - Valid Consent Created here which you get by calling the consent service in the above step
+2. consentID header - Valid Consent Id, Created here which you get by calling the consent service in the above step
 3. Ocp-Apim-Subscription-Key header - API key which you get from our Openbanking WebPortal
 4. Authorization header - Valid Access token which you get from our Openbanking WebPortal
 5. withBalance parameter - true/false
@@ -211,10 +211,39 @@ There's an example in our demo test-client on how to do that in .Net core:
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/22%20-%20AccountsList.png?raw=true)
 
-#### How to Initiate and Authorize a Payment
-!TODO hér vantar screenshot úr nýja UI portalnum fyrir SCA payments
-...
+The http call looks like this - example for getting accounts:
 
+```javascript
+curl -X GET "/v1/accounts?withBalance=true" -H "accept: text/plain" -H "xRequestID: <random-UUID>" -H "consentID: <Consent-ID>" -H "Ocp-Apim-Subscription-Key: <API-Key>" -H "Authorization: Bearer <AccessToken>"
+```
+
+#### How to Initiate and Authorize a Payment
+
+To get account data, you use the PayemntsServiceApi, which is located here: https://isit-openbanking-sandbox-iobws-master.prod.service.arionbanki.is/swagger/index.html
+
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/25%20-%20Payments%20Swagger.png?raw=true)
+
+These are the parameters required to do a payment by calling our OpenBanking Apis:
+1. Go to /v1/payments/sepa-credit-transfer. 
+2. xRequestID header - Valid UUID
+3. consentID header - Valid Consent Id, Created here which you get by calling the consent service in the above step
+4. Ocp-Apim-Subscription-Key header - API key which you get from our Openbanking WebPortal
+5. pSUIPAddress header -  Valid IP Address
+6. Authorization header - Valid Access token
+7. payment-service parameter: payments
+8. payment-product parameter: sepa-credit-transfer
+
+
+There's an example in our demo test-client on how to do that in .Net core:
+( below the image is an example of how the actual call looks like, for example if you're using another programming language than .Net )
+
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/26%20-%20Payments%20Initiate.png?raw=true)
+
+The http call looks like this - example for creating a payment:
+
+```javascript
+curl -X POST "/v1/payments/sepa-credit-transfer" -H "accept: text/plain" -H "xRequestID: <random-UUID>" -H "pSUIPAddress: <IP-Address>" -H "Ocp-Apim-Subscription-Key: <API-Key>" -H "X-Request-Context-User: 6093608" -H "Authorization: Bearer <Access-Token>" -H "Content-Type: application/json-patch+json" -d "{\"EndToEndIdentification\":\"beb9d5da517040fa99d619574f6ccb72\",\"DebtorAccount\":{\"Iban\":\"IS970352264747671912631469\",\"Bban\":null},\"DebtorId\":\"1912631469\",\"UltimateDebtor\":null,\"UltimateDebtorId\":null,\"InstructedAmount\":{\"Currency\":\"EUR\",\"amount\":\"1\"},\"CreditorAccount\":{\"Iban\":\"IS340395263302831912631469\",\"Bban\":null},\"CreditorAgent\":\"ESJAISRE\",\"CreditorAgentName\":null,\"CreditorName\":\"Creditor Name\",\"UltimateCreditor\":null,\"UltimateCreditorId\":null,\"IcelandicPurpose\":null,\"RemittanceInformationUnstructured\":\"my description\",\"RequestedExecutionDate\":null}""
+```
 
 #### How to Request Information about Available Funds
 
