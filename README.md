@@ -203,6 +203,7 @@ These are the parameters required to geta Account List by calling our OpenBankin
 
 There's an example in our demo test-client on how to do that in .Net core:
 ( below the image is an example of how the actual call looks like, for example if you're using another programming language than .Net )
+
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/22%20-%20AccountsList.png?raw=true)
 
 
