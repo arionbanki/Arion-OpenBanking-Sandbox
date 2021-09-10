@@ -110,11 +110,13 @@ Please note that you need the "openbanking.read" and "openbanking.readwrite" sco
 - it is already supplied in the token you get from our OpenBanking WebPortal, as you can see by inspecting the token ( e.g. by pasting it into www.jwt.io ):
 
 an example token:
+
 ```javascript
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiLDnsOzcmV5IFLDs3Mgw57DjSDDk2xhZnNkw7N0dGlyIiwiaHR0cDovL3NjaGVtYXMuYXJpb25iYW5raS5pcy93cy8yMDIwLzA1L3NhbmRib3gvY2xhaW1zL2FwaWtleSI6ImJiYzZlOGYyZjcyOTRkMDJhMjkzN2MzYjNhODY5YjBiIiwiaHR0cDovL3NjaGVtYXMuYXJpb25iYW5raS5pcy93cy8yMDIwLzA1L2NsYWltcy9rZW5uaXRhbGEiOiIxOTEyNjMxNDY5IiwiaHR0cDovL3NjaGVtYXMuYXJpb25iYW5raS5pcy93cy8yMDIwLzA1L2NsYWltcy9hcHBpZCI6IlRoZUNsaWVudCIsInNjcCI6InByb2ZpbGUsIG9wZW5iYW5raW5nLnJlYWQsIG9wZW5iYW5raW5nLnJlYWR3cml0ZSIsIm5iZiI6MTYzMTE3OTgwNiwiZXhwIjoxNjMxMjM5ODA2LCJpc3MiOiJBcmlvblNhbmRib3ggRGV2IElzc3VlciIsImF1ZCI6InVybjppb2J3cyJ9.EaX-MSr885v5ZW8834Ozx9orPJbEUHh3zt6__9ln0HM
 ```
 
-the values for it:
+the values for the token look like this:
+
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/20%20-%20Example%20Token%20Scopes.png?raw=true)
 
 To be able to use our OpenBanking Services, you need to create a consent
