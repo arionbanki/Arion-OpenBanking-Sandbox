@@ -82,6 +82,7 @@ You're all set! ;-)
 
 ## Appendix
 
+### Create More Test Data
 If you want to upload more example data for the user created inside the webportal, you can do that.
 Under users, hit the upload button and you can download a template with example data, so more data can be added to your test user.
 
@@ -94,3 +95,31 @@ When you hit the "Download a example" you'll get a CSV file which you can modify
 
 After you've created your data, you can hit the "Choose file" to upload it for the selected user:
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/17%20-%20Upload.png?raw=true)
+
+### Calling the OpenBanking Api
+The Swagger for our OpenBanking Api can be found here:
+https://isit-openbanking-sandbox-iobws-master.prod.service.arionbanki.is/swagger/index.html
+
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/18%20-%20Iobws%20Swagger.png?raw=true)
+
+
+Here is a detailed documentation for our it:
+https://isit-openbanking-sandbox-ui-master.prod.service.arionbanki.is/redocly
+
+Please note that you need the "openbanking.read" and "openbanking.readwrite" scopes to be able to access our OpenBanking Api
+- it is already supplied in the token you get from our OpenBanking WebPortal
+
+To be able to use our OpenBanking Services, you need to create a consent
+
+There's an example in our demo test-client on how to do that in .Net core:
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/19%20-%20Create%20Consent%20In%20Net.png?raw=true)
+
+But the http call basically looks like this:
+
+## Example for creating a consent
+
+```javascript
+curl -X POST "/v1/consents" -H "accept: text/plain" -H "xRequestID: <random-UUID>" -H "pSUIPAddress: <IP-Address>" -H "PSU_ID: <PSU-ID>" -H "Ocp-Apim-Subscription-Key: <API-Key>" -H "Authorization: Bearer <AccessToken>" -H "Content-Type: application/json-patch+json" -d "{\"access\":{\"accounts\":[{\"iban\":\"IS970352264747671912631469\",\"bban\":\"035226474767\",\"pan\":null,\"maskedPan\":\"492500******1234\",\"msisdn\":null,\"currency\":\"ISK\"},{\"iban\":\"IS340395263302831912631469\",\"bban\":\"039526330283\",\"pan\":null,\"maskedPan\":null,\"msisdn\":null,\"currency\":\"ISK\"}],\"balances\":null,\"transactions\":null,\"availableAccounts\":null,\"availableAccountsWithBalance\":null,\"allPsd2\":null},\"recurringIndicator\":true,\"validUntil\":\"2021-09-02T14:35:47.0470702+00:00\",\"frequencyPerDay\":4,\"combinedServiceIndicator\":false}"
+```
+
+Later when calling the Accounts or Payments endpoints you use the id which you get back when creating a consent
