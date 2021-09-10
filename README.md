@@ -184,21 +184,29 @@ scaRedirect": {
 ```
 
 and if we open up that path we get this page, where we can confirm the consent:
-
 !TODO hér vantar screenshot úr nýja UI portalnum fyrir Consents
 
 #### How to Access Account Balances and Transactions
 
-...
+To get account data, you use the AccountsInformationServiceApi, which is located here:
+https://isit-openbanking-sandbox-iobws-master.prod.service.arionbanki.is/swagger/index.html
+
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/21%20-%20AccountsApi.png?raw=true)
+
+These are the parameters required to geta Account List by calling our OpenBanking Apis:
+1. xRequestID header - Valid UUID
+2. consentID header - Valid Consent Created here which you get by calling the consent service in the above step
+3. Ocp-Apim-Subscription-Key header - API key which you get from our Openbanking WebPortal
+4. Authorization header - Valid Access token which you get from our Openbanking WebPortal
+5. withBalance parameter - true/false
 
 
-
-
-
+There's an example in our demo test-client on how to do that in .Net core:
+( below the image is an example of how the actual call looks like, for example if you're using another programming language than .Net )
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/22%20-%20AccountsList.png?raw=true)
 
 
 #### How to Initiate and Authorize a Payment
-
 !TODO hér vantar screenshot úr nýja UI portalnum fyrir SCA payments
 ...
 
