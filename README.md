@@ -183,8 +183,13 @@ scaRedirect": {
       "href": "https://localhost:44303/psd2/scas/authorize?clientid=TheClient&response_type=code&scope=openid+CO%3A151&redirect_uri=" }
 ```
 
-and if we open up that path we get this page, where we can confirm the consent:
-!TODO hér vantar screenshot úr nýja UI portalnum fyrir Consents
+and if we open up that path we get this page, where we can authorize the consent:
+
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/23%20-%20Consents.png?raw=true)
+
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/24%20-%20Consent%20agreed.png?raw=true)
+
+All done! You're ready to call the actual OpenBanking Apis now ;-)
 
 #### How to Access Account Balances and Transactions
 
@@ -205,7 +210,6 @@ There's an example in our demo test-client on how to do that in .Net core:
 ( below the image is an example of how the actual call looks like, for example if you're using another programming language than .Net )
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/22%20-%20AccountsList.png?raw=true)
-
 
 #### How to Initiate and Authorize a Payment
 !TODO hér vantar screenshot úr nýja UI portalnum fyrir SCA payments
