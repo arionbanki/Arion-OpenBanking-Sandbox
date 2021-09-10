@@ -138,6 +138,7 @@ These are the parameters required to create a valid consent, which you then need
 5. Authorization header - Valid Access token which you get from our Openbanking WebPortal 
 
 There's an example in our demo test-client on how to do that in .Net core:
+
 ( below the image is an example of how the actual call looks like, for example if you're using another programming language than .Net )
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/19%20-%20Create%20Consent%20In%20Net.png?raw=true)
 
@@ -207,6 +208,7 @@ These are the parameters required to get Account List by calling our OpenBanking
 
 
 There's an example in our demo test-client on how to do that in .Net core:
+
 ( below the image is an example of how the actual call looks like, for example if you're using another programming language than .Net )
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/22%20-%20AccountsList.png?raw=true)
@@ -235,6 +237,7 @@ These are the parameters required to do a payment by calling our OpenBanking Api
 
 
 There's an example in our demo test-client on how to do that in .Net core:
+
 ( below the image is an example of how the actual call looks like, for example if you're using another programming language than .Net )
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/26%20-%20Payments%20Initiate.png?raw=true)
