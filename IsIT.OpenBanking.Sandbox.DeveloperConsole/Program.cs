@@ -16,7 +16,7 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
         // User (PSU) identifier. Reserverd User from Developer Portal
         private static readonly string NATIONAL_REGISTRY_ID = "[Place your created user's national registry id from the developer portal in here]";
         // Base path to api
-        private static readonly string IOBWS_BASE_PATH = "https://apigw.arionbanki.is/iobws/v1";
+        private static readonly string IOBWS_BASE_PATH = "https://apigw.arionbanki.is/iobws/api/v1";
         
         // ID of the request, unique to the call, as determined by the initiating party.
         private static string REQUESTID = Guid.NewGuid().ToString();
