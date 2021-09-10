@@ -143,3 +143,29 @@ The http call looks like this - example for creating a consent:
 ```javascript
 curl -X POST "/v1/consents" -H "accept: text/plain" -H "xRequestID: <random-UUID>" -H "pSUIPAddress: <IP-Address>" -H "PSU_ID: <PSU-ID>" -H "Ocp-Apim-Subscription-Key: <API-Key>" -H "Authorization: Bearer <AccessToken>" -H "Content-Type: application/json-patch+json" -d "{\"access\":{\"accounts\":[{\"iban\":\"IS970352264747671912631469\",\"bban\":\"035226474767\",\"pan\":null,\"maskedPan\":\"492500******1234\",\"msisdn\":null,\"currency\":\"ISK\"},{\"iban\":\"IS340395263302831912631469\",\"bban\":\"039526330283\",\"pan\":null,\"maskedPan\":null,\"msisdn\":null,\"currency\":\"ISK\"}],\"balances\":null,\"transactions\":null,\"availableAccounts\":null,\"availableAccountsWithBalance\":null,\"allPsd2\":null},\"recurringIndicator\":true,\"validUntil\":\"2021-09-02T14:35:47.0470702+00:00\",\"frequencyPerDay\":4,\"combinedServiceIndicator\":false}"
 ```
+
+and here's an example of the return type ( the actual consent ):
+```javascript
+{
+  "consentStatus": "received",
+  "consentId": "151",
+  "scaMethods": null,
+  "chosenScaMethod": null,
+  "challengeData": null,
+  "_links": {
+    "scaRedirect": {
+      "href": "https://localhost:44303/psd2/scas/authorize?clientid=TheClient&response_type=code&scope=openid+CO%3A151&redirect_uri="
+    },
+    "self": {
+      "href": "/v1/consents/151"
+    },
+    "status": {
+      "href": "/v1/consents/151/status"
+    },
+    "scaStatus": {
+      "href": "/v1/consents/151/authorisations/c6d7b64f-bbea-4d8e-9866-73b7c714db31"
+    }
+  },
+  "psuMessage": null
+}
+```
