@@ -134,6 +134,7 @@ These are the paramters required to create a valid consent:
 5. Authorization header - Valid Access token which you get from our Openbanking WebPortal 
 
 There's an example in our demo test-client on how to do that in .Net core:
+( below the image is an example of how the actual call looks like, for example if you're using another programming language than .Net )
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/19%20-%20Create%20Consent%20In%20Net.png?raw=true)
 
 
