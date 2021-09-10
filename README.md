@@ -123,8 +123,8 @@ the values for the token look like this:
 
 #### Creating a consent
 In the PSD2 directive consents are needed to 
-* access account balances and transactions,
-* and initiate and authorize payment
+* Access Account Balances and Transactions,
+* and Initiate And Authorize Payment
 
 So to be able to use our OpenBanking Services, you need to create a consent
 
