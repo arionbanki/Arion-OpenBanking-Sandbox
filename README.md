@@ -100,13 +100,13 @@ After you've created your data, you can hit the "Choose file" to upload it for t
 
 ### Calling the OpenBanking Api
 The Swagger for our OpenBanking Api can be found here:
-https://developers-api.arionbanki.is/swagger/index.html
+https://isit-openbanking-sandbox-iobws-master.prod.service.arionbanki.is/swagger/index.html
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/18%20-%20Iobws%20Swagger.png?raw=true)
 
 
 Here is a detailed documentation for our it:
-https://isit-openbanking-sandbox-ui-master.prod.service.arionbanki.is/redocly
+https://developers.arionbanki.is/redocly
 
 Please note that you need the "openbanking.read" and "openbanking.readwrite" scopes to be able to access our OpenBanking Api
 - it is already supplied in the token you get from our OpenBanking WebPortal, as you can see by inspecting the token ( e.g. by pasting it into www.jwt.io ):
@@ -196,7 +196,7 @@ All done! You're ready to call the actual OpenBanking Apis now ;-)
 Prerequisite: to be able to call these services, you need to have confirmed consent available, see the "Creating a consent" above for more info.
 
 To get account data, you use the AccountsInformationServiceApi, which is located here:
-https://developers-api.arionbanki.is/swagger/index.html
+https://isit-openbanking-sandbox-iobws-master.prod.service.arionbanki.is/swagger/index.html
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/21%20-%20AccountsApi.png?raw=true)
 
@@ -223,7 +223,7 @@ curl -X GET "/v1/accounts?withBalance=true" -H "accept: text/plain" -H "xRequest
 
 Prerequisite: to be able to call these services, you need to have confirmed consent available, see the "Creating a consent" above for more info.
 
-To get account data, you use the PayemntsServiceApi, which is located here: https://developers-api.arionbanki.is/swagger/index.html
+To get account data, you use the PayemntsServiceApi, which is located here: https://isit-openbanking-sandbox-iobws-master.prod.service.arionbanki.is/swagger/index.html
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/25%20-%20Payments%20Swagger.png?raw=true)
 
@@ -233,7 +233,7 @@ These are the parameters required to do a payment by calling our OpenBanking Api
 3. consentID header - Valid Consent Id, Created here which you get by calling the consent service in the above step
 4. Ocp-Apim-Subscription-Key header - API key which you get from our Openbanking WebPortal
 5. pSUIPAddress header -  Valid IP Address
-6. Authorization header - Valid Access token
+6. Authorization header - Valid Access token which you get from our Openbanking WebPortal
 7. payment-service parameter: payments
 8. payment-product parameter: sepa-credit-transfer
 
@@ -253,4 +253,26 @@ curl -X POST "/v1/payments/sepa-credit-transfer" -H "accept: text/plain" -H "xRe
 
 Prerequisite: to be able to call these services, you need to have confirmed consent available, see the "Creating a consent" above for more info.
 
-To get information about Available Funds, you use the PayemntsServiceApi, which is located here: https://developers-api.arionbanki.is/swagger/index.html
+To get information about Available Funds, you use the PayemntsServiceApi, which is located here: https://isit-openbanking-sandbox-iobws-master.prod.service.arionbanki.is/swagger/index.html
+
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/27%20-%20Confirmation%20Of%20Funds.png?raw=true)
+
+These are the parameters required to get confirmation of funds by calling our OpenBanking Apis:
+1. Go to /v1/accounts/{account-id}/balances. 
+2. accountId - Valid account Id
+3. xRequestID header - Valid UUID
+4. consentID header - Valid Consent Id, Created here which you get by calling the consent service in the above step
+5. Ocp-Apim-Subscription-Key header - API key created here
+5. Authorization header - Valid Access token which you get from our Openbanking WebPortal
+
+There's an example in our demo test-client on how to do that in .Net core:
+( below the image is an example of how the actual call looks like, for example if you're using another programming language than .Net )
+
+![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/28%20-%20Confirmation%20Code%20Example.png?raw=true)
+
+The http call looks like this - example for getting confirmation of funds:
+
+```javascript
+curl -X GET "/api/v1/accounts/<account-id>/balances" -H "accept: text/plain" -H "xRequestID: <random-UUID>" -H "consentID: <Consent-ID>" -H "Ocp-Apim-Subscription-Key: <API-Key>"  -H "Authorization: <Access-Token>"
+
+```
