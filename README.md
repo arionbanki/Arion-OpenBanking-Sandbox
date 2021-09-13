@@ -100,7 +100,7 @@ After you've created your data, you can hit the "Choose file" to upload it for t
 
 ### Calling the OpenBanking Api
 The Swagger for our OpenBanking Api can be found here:
-https://isit-openbanking-sandbox-iobws-master.prod.service.arionbanki.is/swagger/index.html
+https://developers-api.arionbanki.is/swagger/index.html
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/18%20-%20Iobws%20Swagger.png?raw=true)
 
@@ -138,7 +138,6 @@ These are the parameters required to create a valid consent, which you then need
 5. Authorization header - Valid Access token which you get from our Openbanking WebPortal 
 
 There's an example in our demo test-client on how to do that in .Net core:
-
 ( below the image is an example of how the actual call looks like, for example if you're using another programming language than .Net )
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/19%20-%20Create%20Consent%20In%20Net.png?raw=true)
 
@@ -190,12 +189,14 @@ and if we open up that path we get this page, where we can authorize the consent
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/24%20-%20Consent%20agreed.png?raw=true)
 
-All done! You now have an authorized consent and you're ready to call the actual OpenBanking Apis now ;-)
+All done! You're ready to call the actual OpenBanking Apis now ;-)
 
 #### How to Access Account Balances and Transactions
 
+Prerequisite: to be able to call these services, you need to have confirmed consent available, see the "Creating a consent" above for more info.
+
 To get account data, you use the AccountsInformationServiceApi, which is located here:
-https://isit-openbanking-sandbox-iobws-master.prod.service.arionbanki.is/swagger/index.html
+https://developers-api.arionbanki.is/swagger/index.html
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/21%20-%20AccountsApi.png?raw=true)
 
@@ -208,7 +209,6 @@ These are the parameters required to get Account List by calling our OpenBanking
 
 
 There's an example in our demo test-client on how to do that in .Net core:
-
 ( below the image is an example of how the actual call looks like, for example if you're using another programming language than .Net )
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/22%20-%20AccountsList.png?raw=true)
@@ -221,7 +221,9 @@ curl -X GET "/v1/accounts?withBalance=true" -H "accept: text/plain" -H "xRequest
 
 #### How to Initiate and Authorize a Payment
 
-To get account data, you use the PayemntsServiceApi, which is located here: https://isit-openbanking-sandbox-iobws-master.prod.service.arionbanki.is/swagger/index.html
+Prerequisite: to be able to call these services, you need to have confirmed consent available, see the "Creating a consent" above for more info.
+
+To get account data, you use the PayemntsServiceApi, which is located here: https://developers-api.arionbanki.is/swagger/index.html
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/25%20-%20Payments%20Swagger.png?raw=true)
 
@@ -237,7 +239,6 @@ These are the parameters required to do a payment by calling our OpenBanking Api
 
 
 There's an example in our demo test-client on how to do that in .Net core:
-
 ( below the image is an example of how the actual call looks like, for example if you're using another programming language than .Net )
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/26%20-%20Payments%20Initiate.png?raw=true)
@@ -250,4 +251,6 @@ curl -X POST "/v1/payments/sepa-credit-transfer" -H "accept: text/plain" -H "xRe
 
 #### How to Request Information about Available Funds
 
-...
+Prerequisite: to be able to call these services, you need to have confirmed consent available, see the "Creating a consent" above for more info.
+
+To get information about Available Funds, you use the PayemntsServiceApi, which is located here: https://developers-api.arionbanki.is/swagger/index.html
