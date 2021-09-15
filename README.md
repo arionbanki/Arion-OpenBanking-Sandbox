@@ -11,7 +11,7 @@
   
   Login/Register to the Arion WebPortal
 
-Go to https://developers.arionbanki.is/ and click "Get Started"
+Go to https://developer.arionbanki.is/ and click "Get Started"
 
 
 ![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/02%20-%20Getting%20Started.png?raw=true)
@@ -106,7 +106,7 @@ https://isit-openbanking-sandbox-iobws-master.prod.service.arionbanki.is/swagger
 
 
 Here is a detailed documentation for our it:
-https://developers.arionbanki.is/redocly
+https://developer.arionbanki.is/redocly
 
 Please note that you need the "openbanking.read" and "openbanking.readwrite" scopes to be able to access our OpenBanking Api
 - it is already supplied in the token you get from our OpenBanking WebPortal, as you can see by inspecting the token ( e.g. by pasting it into www.jwt.io ):
