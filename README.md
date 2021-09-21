@@ -228,14 +228,14 @@ To get account data, you use the PayemntsServiceApi, which is located here: http
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/25%20-%20Payments%20Swagger.png?raw=true)
 
 These are the parameters required to do a payment by calling our OpenBanking Apis:
-1. Go to /v1/payments/sepa-credit-transfer. 
+1. Go to /v1/payments/sepa-credit-transfers. 
 2. xRequestID header - Valid UUID
 3. consentID header - Valid Consent Id, Created here which you get by calling the consent service in the above step
 4. Ocp-Apim-Subscription-Key header - API key which you get from our Openbanking WebPortal
 5. pSUIPAddress header -  Valid IP Address
 6. Authorization header - Valid Access token which you get from our Openbanking WebPortal
 7. payment-service parameter: payments
-8. payment-product parameter: sepa-credit-transfer
+8. payment-product parameter: sepa-credit-transfers
 
 
 There's an example in our demo test-client on how to do that in .Net core:
@@ -246,7 +246,7 @@ There's an example in our demo test-client on how to do that in .Net core:
 The http call looks like this - example for creating a payment:
 
 ```javascript
-curl -X POST "/v1/payments/sepa-credit-transfer" -H "accept: text/plain" -H "xRequestID: <random-UUID>" -H "pSUIPAddress: <IP-Address>" -H "Ocp-Apim-Subscription-Key: <API-Key>" -H "X-Request-Context-User: 6093608" -H "Authorization: Bearer <Access-Token>" -H "Content-Type: application/json-patch+json" -d "{\"EndToEndIdentification\":\"beb9d5da517040fa99d619574f6ccb72\",\"DebtorAccount\":{\"Iban\":\"IS970352264747671912631469\",\"Bban\":null},\"DebtorId\":\"1912631469\",\"UltimateDebtor\":null,\"UltimateDebtorId\":null,\"InstructedAmount\":{\"Currency\":\"EUR\",\"amount\":\"1\"},\"CreditorAccount\":{\"Iban\":\"IS340395263302831912631469\",\"Bban\":null},\"CreditorAgent\":\"ESJAISRE\",\"CreditorAgentName\":null,\"CreditorName\":\"Creditor Name\",\"UltimateCreditor\":null,\"UltimateCreditorId\":null,\"IcelandicPurpose\":null,\"RemittanceInformationUnstructured\":\"my description\",\"RequestedExecutionDate\":null}""
+curl -X POST "/v1/payments/sepa-credit-transfers" -H "accept: text/plain" -H "xRequestID: <random-UUID>" -H "pSUIPAddress: <IP-Address>" -H "Ocp-Apim-Subscription-Key: <API-Key>" -H "X-Request-Context-User: 6093608" -H "Authorization: Bearer <Access-Token>" -H "Content-Type: application/json-patch+json" -d "{\"EndToEndIdentification\":\"beb9d5da517040fa99d619574f6ccb72\",\"DebtorAccount\":{\"Iban\":\"IS970352264747671912631469\",\"Bban\":null},\"DebtorId\":\"1912631469\",\"UltimateDebtor\":null,\"UltimateDebtorId\":null,\"InstructedAmount\":{\"Currency\":\"EUR\",\"amount\":\"1\"},\"CreditorAccount\":{\"Iban\":\"IS340395263302831912631469\",\"Bban\":null},\"CreditorAgent\":\"ESJAISRE\",\"CreditorAgentName\":null,\"CreditorName\":\"Creditor Name\",\"UltimateCreditor\":null,\"UltimateCreditorId\":null,\"IcelandicPurpose\":null,\"RemittanceInformationUnstructured\":\"my description\",\"RequestedExecutionDate\":null}""
 ```
 
 #### How to Request Information about Available Funds
