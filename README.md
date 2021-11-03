@@ -51,7 +51,7 @@ Next head into the Data menu and create your Users
 
 ![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/07%20-%20Manage%20Users.png?raw=true)
 
-After you've hit "Add User" - then select your newly created user in the grid to generate data for him/her
+Hit "Add User" - then select your newly created user in the grid to generate data for him/her
 
 To create data for that user, hit "Create Account":
 
