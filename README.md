@@ -69,11 +69,9 @@ This token will be used to connect to our OpenBanking Api services:
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/10%20-%20Generate%20Token%20Button.png?raw=true)
 
-Select your application and the person you want to generate a token for. If you've created multiple users, you will get multiple users from this dropdown. If not, you'll only see one user:
+Select your application and the person you want to generate a token for. If you've created multiple users, you will get multiple users from this dropdown. If not, you'll only see one user.
 
-![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/12%20-%20Token%20Generation.png?raw=true)
-
-Next, click "Create Token" tok get your OpenId token to use in your client for our OpenBanking services
+Click "Create Token" tok get your OpenId token to use in your client for our OpenBanking services
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/12%20-%20Token%20Generation.png?raw=true)
 
 Your token will be created and you can copy the value to use in your application, and set it as bearer in the http header of your application:
