@@ -28,11 +28,10 @@ Enter the name of your Application
 
 Enter a public description of your Application (optional)
 
-Click "Create Application"
-
 ![App Screneshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/05%20-%20Application%20Details%20Create1.png?raw=true)
 
-After that you'll have to select your product, in this case the Arion Sandbox
+After that you'll have to select your product, in this case the Arion Sandbox.
+Click "Create Application"
 
 ![App Screneshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/06%20-%20Select%20Product.png?raw=true)
 
