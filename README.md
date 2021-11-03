@@ -47,7 +47,7 @@ You will use this data in your code to connect to Arion's OpenBanking services.
 ![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/07%20-%20My%20App%20Details.png?raw=true)
 
 
-Next head into the Users menu and create your Users
+Next head into the Data menu and create your Users
 
 ![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/07%20-%20Manage%20Users.png?raw=true)
 
