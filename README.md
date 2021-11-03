@@ -61,7 +61,11 @@ Your newly created test data will be displayed:
 
 ![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/09%20-%20Accounts%20Data.png?raw=true)
 
-Next head into your Application details page and generate a token. This token will be used to connect to our OpenBanking Api services:
+Next head into your Application details page and generate a token.
+
+Hit the "..."
+
+This token will be used to connect to our OpenBanking Api services:
 
 ![App screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/10%20-%20Generate%20Token%20Button.png?raw=true)
 
