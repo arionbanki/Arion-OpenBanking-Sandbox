@@ -1,5 +1,5 @@
 ![Logo](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/01%20-%20arionlogoblue.png?raw=true)
-# Lausnamót 2021 - Arion's Open Banking platform
+# Arion's Open Banking platform
 
 
 ## Documentation
