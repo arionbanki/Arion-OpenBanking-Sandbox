@@ -39,15 +39,12 @@ Click "Create Application"
 ![App Screneshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/06%20-%20Select%20Product.png?raw=true)
 
 
-
-XXXXXXXXXXXXXXXXXXXXXXXX
-
 After that you'll be enrolled in our PSD Sandbox, and you'll see the app details, e.g. ApiKey, ClienId and your ClientSecret.
 
 You will use this data in your code to connect to Arion's OpenBanking services.
 ( CliendId and ClienSecret is not currently needed for demo purposes now )
 
-![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/06%20-%20My%20Demo%20App.png?raw=true)
+![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/07%20-%20My%20App%20Details.png?raw=true)
 
 
 Next head into the Users menu and create your Users
