@@ -16,7 +16,10 @@ Go to https://developer.arionbanki.is/ and click "Get Started"
 
 ![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/02%20-%20Getting%20Started.png?raw=true)
 
-After you've successfully logged in, 
+After you've successfully logged in, fill in your information:
+
+![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/03%20-%20Lets%20Get%20To%20Know%20You.png?raw=true)
+
 Click "Add Application"
 
 ![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/04%20-%20Create%20your%20first%20application.png?raw=true)
