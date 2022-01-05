@@ -757,7 +757,7 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
 
         private static async Task Payment_Initiate()
         {
-            PrintLine($"- POST: {IOBWS_BASE_PATH}/payments/sepa-credit-transfer", true, false);
+            PrintLine($"- POST: {IOBWS_BASE_PATH}/payments/sepa-credit-transfers", true, false);
 
             var sourceIban = "IS970352264747671912631469";
             var destIban = "IS340395263302831912631469";
