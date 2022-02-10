@@ -233,7 +233,7 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                 HttpResponseMessage response = await client.PostAsync($"{IOBWS_BASE_PATH}/consents", SetContent(json));
                 var res = await response.Content.ReadAsStringAsync();
 
-                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                if (response.StatusCode == System.Net.HttpStatusCode.Created)
                 {
                     Console.WriteLine("- Response:");
                     Console.WriteLine(res);
