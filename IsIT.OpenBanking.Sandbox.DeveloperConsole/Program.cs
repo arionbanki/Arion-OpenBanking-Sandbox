@@ -209,10 +209,10 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);                                          // Unique Request Id
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);                                          // Unique Request Id
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);                              // Azure Apim Subscription key
-                client.DefaultRequestHeaders.Add("PSU_ID", NATIONAL_REGISTRY_ID);                                   // PSU ID (kennitala)
-                client.DefaultRequestHeaders.Add("pSUIPAddress", "127.0.0.1");                                      // PSU IP Address
+                client.DefaultRequestHeaders.Add("PSU-ID", NATIONAL_REGISTRY_ID);                                   // PSU ID (kennitala)
+                client.DefaultRequestHeaders.Add("PSU-IP-Address", "127.0.0.1");                                      // PSU IP Address
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN); // PSU Bearer token
 
@@ -254,7 +254,10 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                 {
                     PrintLine("- Error:", false, true);
                     Console.WriteLine($"{response.StatusCode}, {res}");
+                    Console.WriteLine(response.Headers.ToString());
                 }
+
+                PrintHeaders(response);
             }
             catch (Exception ex)
             {
@@ -269,7 +272,7 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN);
@@ -287,6 +290,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                     PrintLine("- Error:", false, true);
                     Console.WriteLine($"{response.StatusCode}, {res}");
                 }
+
+                PrintHeaders(response);
             }
             catch (Exception ex)
             {
@@ -301,7 +306,7 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN);
@@ -319,6 +324,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                     PrintLine("- Error:", false, true);
                     Console.WriteLine($"{response.StatusCode}, {res}");
                 }
+
+                PrintHeaders(response);
             }
             catch (Exception ex)
             {
@@ -333,7 +340,7 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN);
@@ -351,6 +358,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                     PrintLine("- Error:", false, true);
                     Console.WriteLine($"{response.StatusCode}, {res}");
                 }
+
+                PrintHeaders(response);
             }
             catch (Exception ex)
             {
@@ -369,8 +378,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);                                          // Unique Request Id 
-                client.DefaultRequestHeaders.Add("consentID", CONSENT_ID);                                          // Id of Consent.
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);                                          // Unique Request Id 
+                client.DefaultRequestHeaders.Add("Consent-ID", CONSENT_ID);                                          // Id of Consent.
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);                              // Azure Apim Subscription key
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN); // PSU Bearer token
@@ -395,6 +404,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                     PrintLine("- Error:", false, true);
                     Console.WriteLine($"{response.StatusCode}, {res}");
                 }
+
+                PrintHeaders(response);
             }
             catch (Exception ex)
             {
@@ -409,8 +420,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);                                          // Unique Request Id 
-                client.DefaultRequestHeaders.Add("consentID", CONSENT_ID);                                          // Id of Consent.
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);                                          // Unique Request Id 
+                client.DefaultRequestHeaders.Add("Consent-ID", CONSENT_ID);                                          // Id of Consent.
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);                              // Azure Apim Subscription key
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN); // PSU Bearer token
@@ -428,6 +439,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                     PrintLine("- Error:", false, true);
                     Console.WriteLine($"{response.StatusCode}, {res}");
                 }
+
+                PrintHeaders(response);
             }
             catch (Exception ex)
             {
@@ -442,8 +455,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);                                          // Unique Request Id 
-                client.DefaultRequestHeaders.Add("consentID", CONSENT_ID);                                          // Id of Consent.
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);                                          // Unique Request Id 
+                client.DefaultRequestHeaders.Add("Consent-ID", CONSENT_ID);                                          // Id of Consent.
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);                              // Azure Apim Subscription key
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN); // PSU Bearer token
@@ -468,6 +481,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                     PrintLine("- Error:", false, true);
                     Console.WriteLine($"{response.StatusCode}, {res}");
                 }
+
+                PrintHeaders(response);
             }
             catch (Exception ex)
             {
@@ -482,8 +497,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);                                          // Unique Request Id 
-                client.DefaultRequestHeaders.Add("consentID", CONSENT_ID);                                          // Id of Consent.
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);                                          // Unique Request Id 
+                client.DefaultRequestHeaders.Add("Consent-ID", CONSENT_ID);                                          // Id of Consent.
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);                              // Azure Apim Subscription key
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN); // PSU Bearer token
@@ -508,6 +523,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                     PrintLine("- Error:", false, true);
                     Console.WriteLine($"{response.StatusCode}, {res}");
                 }
+
+                PrintHeaders(response);
             }
             catch (Exception ex)
             {
@@ -522,8 +539,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);                                          // Unique Request Id 
-                client.DefaultRequestHeaders.Add("consentID", CONSENT_ID);                                          // Id of Consent.
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);                                          // Unique Request Id 
+                client.DefaultRequestHeaders.Add("Consent-ID", CONSENT_ID);                                          // Id of Consent.
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);                              // Azure Apim Subscription key
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN); // PSU Bearer token
@@ -541,6 +558,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                     PrintLine("- Error:", false, true);
                     Console.WriteLine($"{response.StatusCode}, {res}");
                 }
+
+                PrintHeaders(response);
             }
             catch (Exception ex)
             {
@@ -559,8 +578,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);                                          // Unique Request Id 
-                client.DefaultRequestHeaders.Add("consentID", CONSENT_ID);                                          // Id of Consent.
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);                                          // Unique Request Id 
+                client.DefaultRequestHeaders.Add("Consent-ID", CONSENT_ID);                                          // Id of Consent.
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);                              // Azure Apim Subscription key
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN); // PSU Bearer token
@@ -599,8 +618,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);                                          // Unique Request Id 
-                client.DefaultRequestHeaders.Add("consentID", CONSENT_ID);                                          // Id of Consent.
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);                                          // Unique Request Id 
+                client.DefaultRequestHeaders.Add("Consent-ID", CONSENT_ID);                                          // Id of Consent.
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);                              // Azure Apim Subscription key
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN); // PSU Bearer token
@@ -632,8 +651,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);                                          // Unique Request Id 
-                client.DefaultRequestHeaders.Add("consentID", CONSENT_ID);                                          // Id of Consent.
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);                                          // Unique Request Id 
+                client.DefaultRequestHeaders.Add("Consent-ID", CONSENT_ID);                                          // Id of Consent.
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);                              // Azure Apim Subscription key
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN); // PSU Bearer token
@@ -665,8 +684,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);                                          // Unique Request Id 
-                client.DefaultRequestHeaders.Add("consentID", CONSENT_ID);                                          // Id of Consent.
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);                                          // Unique Request Id 
+                client.DefaultRequestHeaders.Add("Consent-ID", CONSENT_ID);                                          // Id of Consent.
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);                              // Azure Apim Subscription key
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN); // PSU Bearer token
@@ -702,8 +721,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);                                          // Unique Request Id 
-                client.DefaultRequestHeaders.Add("consentID", CONSENT_ID);                                          // Id of Consent.
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);                                          // Unique Request Id 
+                client.DefaultRequestHeaders.Add("Consent-ID", CONSENT_ID);                                          // Id of Consent.
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);                              // Azure Apim Subscription key
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN); // PSU Bearer token
@@ -719,13 +738,13 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                         pan = "string",
                         maskedPan = "string",
                         msisdn = "string",
-                        currency = "string"
+                        currency = "ISK"
                     },
                     payee = "string",
                     instructedAmount = new
                     {
-                        currency = "ISK",
-                        amount = amount
+                        amount = amount,
+                        currency = "ISK"
                     }
                 };
 
@@ -757,10 +776,10 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
 
         private static async Task Payment_Initiate()
         {
-            PrintLine($"- POST: {IOBWS_BASE_PATH}/payments/sepa-credit-transfers", true, false);
+            PrintLine($"- POST: {IOBWS_BASE_PATH}/payments/credit-transfers", true, false);
 
-            var sourceIban = "IS970352264747671912631469";
-            var destIban = "IS340395263302831912631469";
+            var sourceIban = "IS260370261000871508021480";
+            var destIban = "IS050367266585622808081480";
 
             // Payment Initiation Request body
             var req = new
@@ -775,11 +794,10 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                 {
                     Iban = destIban
                 },
-                CreditorAgent = "ESJAISRE",
-                CreditorName = "Creditor Name",
+                CreditorId = "1234567890",
                 InstructedAmount = new
                 {
-                    _Amount = "1",
+                    Amount = "10",
                     Currency = "EUR"
                 },
                 RemittanceInformationUnstructured = "my description"
@@ -790,14 +808,14 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);                                          // Unique Request Id 
-                client.DefaultRequestHeaders.Add("consentID", CONSENT_ID);                                          // Id of Consent.
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);                                          // Unique Request Id 
+                client.DefaultRequestHeaders.Add("Consent-ID", CONSENT_ID);                                          // Id of Consent.
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);                              // Azure Apim Subscription key
-                client.DefaultRequestHeaders.Add("pSUIPAddress", "127.0.0.1");                                      // PSU IP Address
+                client.DefaultRequestHeaders.Add("PSU-IP-Address", "127.0.0.1");                                      // PSU IP Address
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN); // PSU Bearer token
 
-                HttpResponseMessage response = await client.PostAsync($"{IOBWS_BASE_PATH}/payments/sepa-credit-transfer", SetContent(json));
+                HttpResponseMessage response = await client.PostAsync($"{IOBWS_BASE_PATH}/payments/credit-transfers", SetContent(json));
                 var res = await response.Content.ReadAsStringAsync();
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
@@ -807,7 +825,7 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
 
                     var paymentResponse = JsonDocument.Parse(res);
 
-                    var paymentId = paymentResponse.RootElement.GetProperty("consentId").GetString();
+                    var paymentId = paymentResponse.RootElement.GetProperty("paymentId").GetString();
 
                     var scaLinks = paymentResponse.RootElement.GetProperty("_links");
                     var scaRedirectLink = scaLinks.GetProperty("scaRedirect").GetProperty("href").GetString();
@@ -822,6 +840,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                     PrintLine("- Error:", false, true);
                     Console.WriteLine($"{response.StatusCode}, {res}");
                 }
+
+                PrintHeaders(response);
             }
             catch (Exception ex)
             {
@@ -834,12 +854,12 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN);
 
-                HttpResponseMessage response = await client.GetAsync($"{IOBWS_BASE_PATH}/payments/sepa-credit-transfer/{paymentId}/status");
+                HttpResponseMessage response = await client.GetAsync($"{IOBWS_BASE_PATH}/payments/credit-transfers/{paymentId}/status");
                 var res = await response.Content.ReadAsStringAsync();
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
@@ -852,6 +872,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                     PrintLine("- Error:", false, true);
                     Console.WriteLine($"{response.StatusCode}, {res}");
                 }
+
+                PrintHeaders(response);
             }
             catch (Exception ex)
             {
@@ -864,12 +886,12 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN);
 
-                HttpResponseMessage response = await client.GetAsync($"{IOBWS_BASE_PATH}/payments/sepa-credit-transfer/{paymentId}");
+                HttpResponseMessage response = await client.GetAsync($"{IOBWS_BASE_PATH}/payments/credit-transfers/{paymentId}");
                 var res = await response.Content.ReadAsStringAsync();
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
@@ -882,6 +904,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                     PrintLine("- Error:", false, true);
                     Console.WriteLine($"{response.StatusCode}, {res}");
                 }
+
+                PrintHeaders(response);
             }
             catch (Exception ex)
             {
@@ -894,12 +918,12 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN);
 
-                HttpResponseMessage response = await client.GetAsync($"{IOBWS_BASE_PATH}/payments/sepa-credit-transfer/{paymentId}/authorisations/{authorizationId}");
+                HttpResponseMessage response = await client.GetAsync($"{IOBWS_BASE_PATH}/payments/credit-transfers/{paymentId}/authorisations/{authorizationId}");
                 var res = await response.Content.ReadAsStringAsync();
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
@@ -912,6 +936,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                     PrintLine("- Error:", false, true);
                     Console.WriteLine($"{response.StatusCode}, {res}");
                 }
+
+                PrintHeaders(response);
             }
             catch (Exception ex)
             {
@@ -921,17 +947,17 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
 
         private static async Task GetPaymentIdByRequestId(string requestId)
         {
-            PrintLine($"- GET: {IOBWS_BASE_PATH}/payments/sepa-credit-transfer/info/{requestId}", true, false);
+            PrintLine($"- GET: {IOBWS_BASE_PATH}/payments/credit-transfers/info/{requestId}", true, false);
 
             try
             {
                 HttpClient client = new HttpClient();
-                client.DefaultRequestHeaders.Add("xRequestID", REQUESTID);
+                client.DefaultRequestHeaders.Add("X-Request-ID", REQUESTID);
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", APIKEY);
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ACCESS_TOKEN);
 
-                HttpResponseMessage response = await client.GetAsync($"{IOBWS_BASE_PATH}/payments/sepa-credit-transfer/info/{requestId}");
+                HttpResponseMessage response = await client.GetAsync($"{IOBWS_BASE_PATH}/payments/credit-transfers/info/{requestId}");
                 var res = await response.Content.ReadAsStringAsync();
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
@@ -944,6 +970,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
                     PrintLine("- Error:", false, true);
                     Console.WriteLine($"{response.StatusCode}, {res}");
                 }
+
+                PrintHeaders(response);
             }
             catch (Exception ex)
             {
