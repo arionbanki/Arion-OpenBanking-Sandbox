@@ -5,8 +5,7 @@
 ## Documentation
 
 
-  ### Getting Started
-  test
+  ### Getting Started  
 
   TPP - Quick Onboarding registration
   
