@@ -131,7 +131,7 @@ After you've created your data, you can hit the "Choose file" to upload it for t
 
 ### Calling the OpenBanking Api
 Here is a detailed documentation for our it:
-https://developer.arionbanki.is/redocly
+https://arion-iobws-3.redoc.ly
 
 Please note that you need the "openbanking.read" and "openbanking.readwrite" scopes to be able to access our OpenBanking Api
 - it is already supplied in the token you get from our OpenBanking WebPortal, as you can see by inspecting the token ( e.g. by pasting it into www.jwt.io ):
@@ -221,7 +221,7 @@ All done! You're ready to call the actual OpenBanking Apis now ;-)
 Prerequisite: to be able to call these services, you need to have confirmed consent available, see the "Creating a consent" above for more info.
 
 To get account data, you use the AccountsInformationServiceApi, which is located here:
-https://developer.arionbanki.is/redocly#tag/AccountInformationServiceApi
+https://arion-iobws-3.redoc.ly#tag/AccountInformationServiceApi
 
 These are the parameters required to get Account List by calling our OpenBanking Apis:
 1. X-Request-ID header - Valid UUID
@@ -246,7 +246,7 @@ curl -X GET "/v1/accounts?withBalance=true" -H "accept: text/plain" -H "X-Reques
 
 Prerequisite: to be able to call these services, you need to have confirmed consent available, see the "Creating a consent" above for more info.
 
-To get payment data, you use the PaymentsServiceApi, which is located here: https://developer.arionbanki.is/redocly#tag/PaymentInitiationServiceApi
+To get payment data, you use the PaymentsServiceApi, which is located here: https://arion-iobws-3.redoc.ly#tag/PaymentInitiationServiceApi
 
 These are the parameters required to do a payment by calling our OpenBanking Apis:
 1. Go to /v1/payments/sepa-credit-transfers. 
@@ -274,7 +274,7 @@ curl -X POST "/v1/payments/sepa-credit-transfers" -H "accept: text/plain" -H "X-
 
 Prerequisite: to be able to call these services, you need to have confirmed consent available, see the "Creating a consent" above for more info.
 
-To get information about Available Funds, you use the PayemntsServiceApi, which is located here: https://developer.arionbanki.is/redocly#tag/ConfirmationOfFundsServiceApi
+To get information about Available Funds, you use the PayemntsServiceApi, which is located here: https://arion-iobws-3.redoc.ly#tag/ConfirmationOfFundsServiceApi
 
 These are the parameters required to get confirmation of funds by calling our OpenBanking Apis:
 1. Go to /v1/accounts/{account-id}/balances. 
