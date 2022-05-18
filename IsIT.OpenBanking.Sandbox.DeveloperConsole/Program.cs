@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -16,12 +16,12 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
         // User (PSU) identifier. Reserverd User from Developer Portal
         private static readonly string NATIONAL_REGISTRY_ID = "[Place your created user's national registry id from the developer portal in here]";
         // Base path to api
-        private static readonly string IOBWS_BASE_PATH = "https://apigwsandbox.arionbanki.is/psd2/api/v1";
-        
+        private static readonly string IOBWS_BASE_PATH = "https://apigwsandbox.arionbanki.is/psd2/api/v1"; // for production, use https://apigw.arionbanki.is/psd2/api/v1
+
         // ID of the request, unique to the call, as determined by the initiating party.
         private static string REQUESTID = Guid.NewGuid().ToString();
         // Access Token created in Developer Portal from UserApplication and User.
-        private static string ACCESS_TOKEN = "[Place your token from the developer portal in here]";
+        private static string ACCESS_TOKEN = "[Place your token from the developer portal in here]"; // To get access token on production, use https://curity-prod.arionbanki.is/oauth/v2/oauth-token
         // Use previously created Consent or call Create Consent.
         private static string CONSENT_ID = "";
 
