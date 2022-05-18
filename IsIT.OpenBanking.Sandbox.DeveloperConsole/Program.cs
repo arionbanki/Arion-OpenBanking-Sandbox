@@ -22,6 +22,8 @@ namespace IsIT.OpenBanking.Sandbox.DeveloperConsole
         private static string REQUESTID = Guid.NewGuid().ToString();
         // Access Token created in Developer Portal from UserApplication and User.
         private static string ACCESS_TOKEN = "[Place your token from the developer portal in here]"; // To get access token on production, use https://curity-prod.arionbanki.is/oauth/v2/oauth-token
+        // Wellknown OpenId enpoint on production can be found here: https://curity.arionbanki.is/oauth/v2/oauth-anonymous/.well-known/openid-configuration
+        
         // Use previously created Consent or call Create Consent.
         private static string CONSENT_ID = "";
 
