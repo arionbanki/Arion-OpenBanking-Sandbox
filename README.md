@@ -14,7 +14,7 @@
 Go to https://developer.arionbanki.is/ and click "Get Started"
 
 
-![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/02%20-%20Getting%20Started.png?raw=true)
+![App Screenshot](https://github.com/arionbanki/Arion-OpenBanking-Sandbox/blob/main/doc-images/02%20-%20Getting%20Started.png)
 
 After you've successfully logged in, fill in your information:
 
